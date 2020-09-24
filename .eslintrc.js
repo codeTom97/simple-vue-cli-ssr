@@ -1,3 +1,8 @@
+/**
+ * @description eslint 相关配置
+ * @author lvhaoxian
+ */
+
 module.exports = {
     root: true,
     env: {

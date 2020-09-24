@@ -1,5 +1,6 @@
 /**
  * @description 样式规范
+ * @author lvhaoxian
  */
 
 module.exports = {
