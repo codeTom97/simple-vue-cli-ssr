@@ -9,10 +9,12 @@ import routes from "./routes";
 
 Vue.use(VueRouter);
 
-const router = new VueRouter({
-    mode: "history",
-    base: process.env.BASE_URL,
-    routes
-});
+const createRouter = function() {
+    return new VueRouter({
+        mode: "history",
+        base: process.env.BASE_URL,
+        routes
+    });
+};
 
-export default router;
+export default createRouter;
