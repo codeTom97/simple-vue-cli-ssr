@@ -2,4 +2,6 @@ node_modules
 /dist
 
 vue.config.js
+vue.config.client.js
+vue.config.server.js
 package.json

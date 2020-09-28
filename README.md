@@ -39,11 +39,16 @@ yarn lint
 |   |-- store                           // vuex的配置管理
 |   |-- utils                           // 项目工具管理
 |   |-- App.vue                         // 页面入口文件
+|   |-- entry-client.js                 // 客户端打包入口
+|   |-- entry-server.js                 // 服务端打包入口
+|   |-- main.ts                         // 程序主入口
 |   |-- shims-tsx.d.ts                  // typescript - jsx类型声明
 |   |-- shims-vue.d.ts                  // typescript - vue类型声明
 |-- public                              // 静态资源目录
 |   |-- index.html                      // 入口文件
 |   |-- favicon.ico                     // 浏览器icon
+|-- server                              // 服务端文件
+|   |-- index.js                        // 服务端启动文件
 |-- test                                // 测试文件
 |   |--                                 // 测试目录
 |-- .browserslistrc                     // 浏览器版本兼容
@@ -58,5 +63,7 @@ yarn lint
 |-- package.json                        // 项目基本信息,包依赖信息等
 |-- README.md                           // 项目说明，markdown文档
 |-- tsconfig.json                       // 项目typescript配置
+|-- vue.config.client.js                // 项目vue-cli脚手架 - 客户端配置
 |-- vue.config.js                       // 项目vue-cli脚手架配置
+|-- vue.config.server.js                // 项目vue-cli脚手架 - 服务端配置
 ```

@@ -6,19 +6,19 @@
 import { RouteConfig } from "vue-router";
 
 const routes: Array<RouteConfig> = [
+    // {
+    //     path: "*",
+    //     redirect: "/"
+    // },
     {
-        path: "*",
-        redirect: "/home"
-    },
-    {
-        path: "/home",
+        path: "/",
         name: "Home",
-        component: () => import(/* webpackChunkName: "home" */ "@/pages/Home.vue")
+        component: () => import(/* webpackChunkName: "home" */ "../pages/Home.vue")
     },
     {
         path: "/about",
         name: "About",
-        component: () => import(/* webpackChunkName: "about" */ "@/pages/About.vue")
+        component: () => import(/* webpackChunkName: "about" */ "../pages/About.vue")
     }
 ];
 
