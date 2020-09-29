@@ -1,8 +1,3 @@
-/**
- * @description vue webpack server 配置
- * @author lvhaoxian
- */
-
 const VueSSRServerPlugin = require("vue-server-renderer/server-plugin");
 const nodeExternals = require("webpack-node-externals");
 
