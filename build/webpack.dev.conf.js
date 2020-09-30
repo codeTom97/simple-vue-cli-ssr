@@ -3,13 +3,9 @@
  * @author lvhaoxian
  */
 
-const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const HTMLPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');  // 错误信息增强
-const ClientRenderPlugin = require("vue-server-renderer/client-plugin");
 
 const baseConf = require('./webpack.base.conf');
 
@@ -22,7 +18,7 @@ const devConf = {
 
     // 入口配置
     entry: {
-        app: "./src/entry-client.js",
+        app: "./src/main.js",
         vendors: ["vue", "vue-router"]
     },
 
@@ -40,15 +36,7 @@ const devConf = {
     },
 
     plugins: [
-        new VueLoaderPlugin(),
-        new ClientRenderPlugin(),
         new webpack.HotModuleReplacementPlugin(),  // 热重载
-        new HTMLPlugin({
-            title: 'Vue client',
-            filename: path.join(__dirname, "../dist/index.html"),
-            template: path.join(__dirname, "../public/index.html"),
-            favicon: path.join(__dirname, "../public/favicon.ico")
-        }),
         new FriendlyErrorsPlugin({
             compilationSuccessInfo: {
                 messages: [`You can application is running here http://${HOST}:${PORT}`],

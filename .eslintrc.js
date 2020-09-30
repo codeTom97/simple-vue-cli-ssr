@@ -10,9 +10,9 @@ module.exports = {
     },
     extends: [
     ],
-    parserOptions: {
-        ecmaVersion: 2020
-    },
+    // parserOptions: {
+    //     ecmaVersion: 2020
+    // },
     rules: {
         // 必须为4个空格
         indent: ["error", 4],

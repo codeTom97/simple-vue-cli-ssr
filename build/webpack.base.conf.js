@@ -3,10 +3,11 @@
  * @author lvhaoxian
  */
 
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HTMLPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const { resolve, isProd } = require("./config");
-
-console.log(isProd)
 
 module.exports = {
     // 出口配置
@@ -138,6 +139,18 @@ module.exports = {
         }
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: isProd ? 'css/[name].[hash].css' : 'css/[name].css' })
+        // .vue文件loader
+        new VueLoaderPlugin(),
+        // html 模板生成
+        new HTMLPlugin({
+            title: 'Vue client',
+            filename: path.join(__dirname, "../dist/index.html"),
+            template: path.join(__dirname, "../public/index.html"),
+            favicon: path.join(__dirname, "../public/favicon.ico")
+        }),
+        // css 抽离
+        new MiniCssExtractPlugin({ 
+            filename: isProd ? 'css/[name].[hash].css' : 'css/[name].css'
+        })
     ]
 };

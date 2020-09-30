@@ -16,6 +16,7 @@ module.exports = {
     /**
      * 环境变量
      */ 
-    isProd: process.env.NODE_ENV === 'production',   // 生产环境
-    isDev: process.env.NODE_ENV === 'development'    // 开发环境
+    isProd: process.env.NODE_ENV === 'production',      // 生产环境
+    isDev: process.env.NODE_ENV === 'development',      // 开发环境
+    isTest: process.env.NODE_ENV === 'test'             // 测试环境
 }
